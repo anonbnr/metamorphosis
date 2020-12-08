@@ -9,7 +9,11 @@ Trait {
 { #category : #adding }
 TTransformationStrategy >> addTransformation: aTransformationClass [
 	"Adds aTransformationClass's representation into this transformation strategy's collection of transformations"
-	self subclassResponsibility
+
+	(self hasTransformation: aTransformationClass)
+		ifFalse: [ transformations
+				at: aTransformationClass name
+				put: aTransformationClass new ]
 ]
 
 { #category : #adding }
@@ -23,7 +27,8 @@ TTransformationStrategy >> addTransformations: aTransformationClassCollection [
 { #category : #testing }
 TTransformationStrategy >> hasTransformation: aTransformationClass [
 	"Returns true if this transformation strategy contains a representation for aTransformationClass, false otherwise"
-	self subclassResponsibility
+
+	^ transformations includesKey: aTransformationClass name
 ]
 
 { #category : #accessing }

@@ -6,7 +6,6 @@ Trait {
 		'currentState'
 	],
 	#traits : 'TModelManager',
-	#classTraits : 'TModelManager classTrait',
 	#category : #'Metamorphosis-Core-ModelManagers'
 }
 

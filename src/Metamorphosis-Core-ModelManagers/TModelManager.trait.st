@@ -48,6 +48,7 @@ TModelManager >> import [
 		ifFalse: [ importer generate ].
 	
 	model := importer import.
+	model rootFolder: (originsRootFolder,originName,'/src').
 	^ model
 ]
 
