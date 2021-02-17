@@ -2,6 +2,7 @@ Trait {
 	#name : #TImporter,
 	#instVars : [
 		'originsRootFolder',
+		'dependenciesFolder',
 		'originName',
 		'modelsRootFolder',
 		'modelName',
@@ -10,6 +11,16 @@ Trait {
 	],
 	#category : #'Metamorphosis-Core-Importers'
 }
+
+{ #category : #accessing }
+TImporter >> dependenciesFolder [
+	^ dependenciesFolder
+]
+
+{ #category : #accessing }
+TImporter >> dependenciesFolder: aDependenciesFolder [
+	dependenciesFolder := aDependenciesFolder
+]
 
 { #category : #generating }
 TImporter >> generate [

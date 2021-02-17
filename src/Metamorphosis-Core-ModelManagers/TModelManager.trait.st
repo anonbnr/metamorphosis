@@ -8,10 +8,21 @@ Trait {
 		'model',
 		'importer',
 		'exporter',
-		'visualizer'
+		'visualizer',
+		'dependenciesFolder'
 	],
 	#category : #'Metamorphosis-Core-ModelManagers'
 }
+
+{ #category : #accessing }
+TModelManager >> dependenciesFolder [
+	^ dependenciesFolder
+]
+
+{ #category : #accessing }
+TModelManager >> dependenciesFolder: aDependencyFolder [
+ dependenciesFolder := aDependencyFolder.
+]
 
 { #category : #exporting }
 TModelManager >> export [
